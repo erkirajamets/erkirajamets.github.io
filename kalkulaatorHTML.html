@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<script src="kalkulaator.js"></script>
+<html>
+<body><link rel="stylesheet" href="kalkulaatorCSS.css">
+
+<h1>Kuumaksete kalkulaator</h1>
+<input type="radio" name="teenus" id="p2ikesepaneelid" onclick="getDefaultSettings(p2ikesepaneelid)" >Päikesepaneelid<br>
+<input type="radio" name="teenus" id="soojuspumbad" onclick="getDefaultSettings(soojuspumbad)">Soojuspumbad<br>
+<input type="radio" name="teenus" id="elekterGaas" onclick="getDefaultSettings(elekterGaas)">Elektritööd või gaasitööd<br>
+<input type="radio" name="teenus" id="võrguvabaElekter" onclick="getDefaultSettings(võrguvabaEljaam)">Off-Grid võrguvaba elekter<br>
+<input type="radio" name="teenus" id="elAutodeLaadimislahendus" onclick="getDefaultSettings(elAutodeLaadijad)">Elektriautode laadimislahendused<br>
+ <!--TODO value muutub "summa" muutujast-->
+ <p>Summa: *</p>
+300<input type="range" name="summa" id="krSumma" min="300" max="25000" style="width:500px;" value="0" step="50" onchange="setKrSumma(this.value)" oninput="this.nextElementSibling.value = this.value"><output></output>  25 000<br>
+
+
+<p>Periood: *</p> 
+<select id="periood" onchange="setPeriood(this.value)">    
+    
+</select>
+<br><br>
+
+sissemakse (eur): *<br>
+<input type="number" name="sissemakse" id="sissemakse" value="0" onchange="setSissemakse(this.value)"><br>
+<output id="sissemakseError"></output>
+
+<br><br>
+Intress <div id="intress"> </div><br>
+Lepingutasu <div id="lepingutasu"> </div><br>
+Igakuine haldustasu<div id="haldustasu"> </div><br>
+Periood<div id="perioodOut"> </div><br>
+<p>Projekti maksumus</p>
+<div id="projektiMaksumus"></div><br> 
+<p >Kuumakse</p> 
+<div id ="kuumakse"></div><br>
+
+<button type="button"
+onclick="getAlert()">
+Esitan taotluse</button>
+
+<p id="demo"></p>
+<p id="toode"></p>
+
+</body>
+</html> 
