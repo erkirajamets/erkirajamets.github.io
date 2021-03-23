@@ -9,8 +9,8 @@
 <input type="radio" name="teenus" id="elekterGaas" onclick="getDefaultSettings(elekterGaas)">Elektritööd või gaasitööd<br>
 <input type="radio" name="teenus" id="võrguvabaElekter" onclick="getDefaultSettings(võrguvabaEljaam)">Off-Grid võrguvaba elekter<br>
 <input type="radio" name="teenus" id="elAutodeLaadimislahendus" onclick="getDefaultSettings(elAutodeLaadijad)">Elektriautode laadimislahendused<br>
- <!--TODO value muutub "summa" muutujast-->
- <p>Summa: *</p>
+ 
+<p>Summa: *</p>
 300<input type="range" name="summa" id="krSumma" min="300" max="25000" style="width:500px;" value="0" step="50" onchange="setKrSumma(this.value)" oninput="this.nextElementSibling.value = this.value"><output></output>  25 000<br>
 
 
